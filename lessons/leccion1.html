@@ -144,11 +144,16 @@
             <div class="practice-section">
                 <h2>Práctica de Diálogo</h2>
                 <div class="dialogue-box">
-                    <div class="audio-control">
-                        <audio id="dialogueAudio" src="../audio/audio-lesson1.mp3"></audio>
-                        <button class="btn-primary" id="playButton" onclick="toggleAudio()">
-                            <span class="icon">▶️</span> Escuchar Conversación
-                        </button>
+                    <div class="audio-player">
+                        <audio id="dialogueAudio">
+                            <source src="../audio/audio-lesson1.mp3" type="audio/mpeg">
+                            Tu navegador no soporta el elemento de audio.
+                        </audio>
+                        <div class="audio-controls">
+                            <button class="btn-primary" id="playButton">
+                                <span class="icon">▶️</span> Escuchar Conversación
+                            </button>
+                        </div>
                     </div>
                     <div class="dialogue-text">
                         <p>A: Hello! I am John. What is your name?</p>
