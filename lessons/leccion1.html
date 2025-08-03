@@ -18,45 +18,134 @@
     <title>Lección 1: Verbo To Be y Saludos - Idina Idiomas Naturales</title>
     <link rel="stylesheet" href="../css/style.css">
     <style>
-        .audio-control {
+        .practice-section {
+            background-color: #f8f9fa;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin: 2rem 0;
+        }
+
+        .dialogue-box {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            margin: 1.5rem 0;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        .audio-player {
+            background: linear-gradient(145deg, #2196f3, #1976d2);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
             text-align: center;
-            margin-bottom: 20px;
+            color: white;
         }
-        
-        .dialogue-text {
-            margin-top: 20px;
-            transition: opacity 0.3s ease;
+
+        .audio-controls {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 1rem 0;
         }
-        
-        .dialogue-text.hidden {
-            opacity: 0;
-            height: 0;
-            overflow: hidden;
-        }
-        
-        .icon {
-            margin-right: 8px;
-        }
-        
-        .practice-controls {
-            margin-top: 20px;
-            text-align: center;
-        }
-        
+
         #playButton {
+            background-color: white;
+            color: #1976d2;
+            border: none;
+            border-radius: 25px;
             padding: 12px 24px;
             font-size: 1.1em;
             display: inline-flex;
             align-items: center;
             justify-content: center;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
         }
-        
-        #playButton .icon {
+
+        #playButton:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        #playButton:active {
+            transform: translateY(0);
+        }
+
+        .icon {
+            margin-right: 8px;
             font-size: 1.2em;
         }
-        
-        #playButton[data-playing="true"] .icon {
-            content: "⏸";
+
+        .dialogue-text {
+            margin-top: 2rem;
+            transition: all 0.3s ease;
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 1.5rem;
+        }
+
+        .dialogue-text.hidden {
+            opacity: 0;
+            height: 0;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .dialogue-text p {
+            margin: 1rem 0;
+            font-size: 1.1em;
+            line-height: 1.5;
+            padding: 0.5rem 1rem;
+            border-left: 4px solid #1976d2;
+        }
+
+        .dialogue-text p:nth-child(even) {
+            border-left-color: #2196f3;
+        }
+
+        .practice-controls {
+            margin-top: 1.5rem;
+            text-align: center;
+        }
+
+        .btn-secondary {
+            background-color: #6c757d;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .btn-secondary:hover {
+            background-color: #5a6268;
+        }
+
+        #audioProgress {
+            width: 100%;
+            height: 4px;
+            background-color: rgba(255,255,255,0.3);
+            border-radius: 2px;
+            margin: 1rem 0;
+            cursor: pointer;
+        }
+
+        #audioProgress .progress-bar {
+            height: 100%;
+            background-color: white;
+            border-radius: 2px;
+            width: 0;
+            transition: width 0.1s linear;
+        }
+
+        .time-display {
+            font-size: 0.9em;
+            color: rgba(255,255,255,0.9);
+            margin-top: 0.5rem;
         }
     </style>
 </head>
@@ -145,10 +234,17 @@
                 <h2>Práctica de Diálogo</h2>
                 <div class="dialogue-box">
                     <div class="audio-player">
-                        <audio id="dialogueAudio">
+                        <h3>📚 Diálogo en Inglés</h3>
+                        <audio id="dialogueAudio" preload="metadata">
                             <source src="../audio/audio-lesson1.mp3" type="audio/mpeg">
                             Tu navegador no soporta el elemento de audio.
                         </audio>
+                        <div id="audioProgress">
+                            <div class="progress-bar"></div>
+                        </div>
+                        <div class="time-display">
+                            <span id="currentTime">0:00</span> / <span id="duration">0:00</span>
+                        </div>
                         <div class="audio-controls">
                             <button class="btn-primary" id="playButton">
                                 <span class="icon">▶️</span> Escuchar Conversación
