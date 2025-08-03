@@ -471,3 +471,41 @@ footer {
     margin: 2rem 0;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
+
+/* Estilos para navegación entre lecciones */
+.next-lesson {
+    color: var(--secondary-color) !important;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.next-lesson:hover {
+    color: var(--primary-color) !important;
+}
+
+.navigation-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    gap: 1rem;
+}
+
+.next-lesson-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.1rem;
+    padding: 1rem 2rem;
+    background-color: var(--secondary-color);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.next-lesson-btn:hover {
+    transform: translateX(5px);
+    background-color: var(--primary-color);
+}
