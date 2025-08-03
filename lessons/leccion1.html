@@ -17,6 +17,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lección 1: Verbo To Be y Saludos - Idina Idiomas Naturales</title>
     <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .audio-control {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .dialogue-text {
+            margin-top: 20px;
+            transition: opacity 0.3s ease;
+        }
+        
+        .dialogue-text.hidden {
+            opacity: 0;
+            height: 0;
+            overflow: hidden;
+        }
+        
+        .icon {
+            margin-right: 8px;
+        }
+        
+        .practice-controls {
+            margin-top: 20px;
+            text-align: center;
+        }
+        
+        #playButton {
+            padding: 12px 24px;
+            font-size: 1.1em;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        #playButton .icon {
+            font-size: 1.2em;
+        }
+        
+        #playButton[data-playing="true"] .icon {
+            content: "⏸";
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -102,12 +144,22 @@
             <div class="practice-section">
                 <h2>Práctica de Diálogo</h2>
                 <div class="dialogue-box">
-                    <p>A: Hello! I am John. What is your name?</p>
-                    <p>B: Hi! I am Sarah. Nice to meet you!</p>
-                    <p>A: Are you a student?</p>
-                    <p>B: Yes, I am. I am a university student.</p>
+                    <div class="audio-control">
+                        <audio id="dialogueAudio" src="../audio/audio-lesson1.mp3"></audio>
+                        <button class="btn-primary" id="playButton" onclick="toggleAudio()">
+                            <span class="icon">▶️</span> Escuchar Conversación
+                        </button>
+                    </div>
+                    <div class="dialogue-text">
+                        <p>A: Hello! I am John. What is your name?</p>
+                        <p>B: Hi! I am Sarah. Nice to meet you!</p>
+                        <p>A: Are you a student?</p>
+                        <p>B: Yes, I am. I am a university student.</p>
+                    </div>
                 </div>
-                <button class="btn-primary" onclick="startRolePlay()">Practicar Diálogo</button>
+                <div class="practice-controls">
+                    <button class="btn-secondary" onclick="toggleTranscript()">Mostrar/Ocultar Texto</button>
+                </div>
             </div>
         </section>
     </main>
