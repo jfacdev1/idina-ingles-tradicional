@@ -3,8 +3,38 @@ class LanguageLearning {
         this.currentProgress = 0;
         this.currentQuestion = 0;
         this.score = 0;
+        this.questions = {
+            pronouns: [
+                {
+                    question: "¿Qué pronombre usarías para decir 'Ellos son estudiantes'?",
+                    options: ["They", "We", "He", "You"],
+                    correct: 0
+                },
+                {
+                    question: "¿Cuál es el pronombre correcto para 'Yo'?",
+                    options: ["I", "You", "He", "We"],
+                    correct: 0
+                }
+            ],
+            numbers: [
+                {
+                    number: 15,
+                    word: "fifteen"
+                },
+                {
+                    number: 8,
+                    word: "eight"
+                }
+            ],
+            days: [
+                {
+                    question: "¿Qué día viene después de Wednesday?",
+                    options: ["Thursday", "Tuesday", "Friday", "Monday"],
+                    correct: 0
+                }
+            ]
+        };
         this.init();
-    }
 
     init() {
         this.updateProgressBar();

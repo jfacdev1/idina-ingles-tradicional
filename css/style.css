@@ -309,3 +309,94 @@ footer {
     background-color: #F2DEDE;
     color: #A94442;
 }
+
+/* Estilos para Lección 2 */
+.numbers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.number-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.number-card:hover {
+    transform: translateY(-5px);
+}
+
+.number {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.number-text {
+    margin-top: 0.5rem;
+    color: var(--text-color);
+}
+
+.days-list {
+    list-style: none;
+    margin: 2rem 0;
+}
+
+.days-list li {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--white);
+    margin-bottom: 0.5rem;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.days-list li:hover {
+    transform: translateX(10px);
+}
+
+.day-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    width: 120px;
+}
+
+.day-pronunciation {
+    color: var(--secondary-color);
+    margin: 0 1rem;
+    font-family: monospace;
+}
+
+.day-translation {
+    color: var(--text-color);
+    font-style: italic;
+}
+
+.number-matching-game {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.practice-button {
+    margin: 2rem auto;
+    display: block;
+}
+
+.theory-section {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    margin: 2rem 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
