@@ -113,7 +113,7 @@ function resetQuiz() {
     initializeQuiz();
 }
 
-// Funciones para el diálogo
+// Funciones para el diálogo y texto a voz
 function startDialoguePractice() {
     const dialogueBox = document.querySelector('.dialogue-box');
     dialogueBox.classList.add('practice-mode');
@@ -123,11 +123,46 @@ function startDialoguePractice() {
     speakerBTexts.forEach(text => {
         text.classList.add('hidden');
     });
+
+    // Agregar botones de audio a cada línea del diálogo
+    const dialogueLines = dialogueBox.querySelectorAll('p');
+    dialogueLines.forEach(line => {
+        if (!line.querySelector('.audio-button')) {
+            const button = document.createElement('button');
+            button.className = 'audio-button';
+            button.innerHTML = '🔊';
+            button.onclick = () => speakText(line.textContent);
+            line.appendChild(button);
+        }
+    });
 }
 
 function showTranslation() {
     const dialogueBox = document.querySelector('.dialogue-box');
     dialogueBox.classList.toggle('show-translation');
+}
+
+// Función para convertir texto a voz usando gTTS a través de una API
+async function speakText(text) {
+    try {
+        const response = await fetch('/api/tts', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ text })
+        });
+        
+        if (!response.ok) throw new Error('Error en la conversión de texto a voz');
+        
+        const audioBlob = await response.blob();
+        const audioUrl = URL.createObjectURL(audioBlob);
+        const audio = new Audio(audioUrl);
+        audio.play();
+    } catch (error) {
+        console.error('Error al reproducir audio:', error);
+        alert('Lo siento, hubo un error al reproducir el audio. Por favor intenta de nuevo.');
+    }
 }
 
 // Función para revisar el ejercicio de escritura
