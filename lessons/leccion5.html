@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lección 5: Artículos y Familia - Idina Idiomas Naturales</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="main-nav">
+            <div class="logo">
+                <h1>Idina Idiomas Naturales</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="leccion4.html">Lección Anterior</a></li>
+                <li><a href="leccion6.html" class="next-lesson">Siguiente Lección →</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="lesson-content">
+            <h1>Lección 5: Artículos (a, an, the) y Vocabulario de Familia</h1>
+            
+            <div class="theory-section">
+                <h2>Los Artículos en Inglés</h2>
+                <div class="grammar-box">
+                    <h3>Uso de Artículos</h3>
+                    <table>
+                        <tr>
+                            <th>Artículo</th>
+                            <th>Uso</th>
+                            <th>Ejemplo</th>
+                        </tr>
+                        <tr>
+                            <td>a</td>
+                            <td>Para sustantivos singulares que empiezan con consonante</td>
+                            <td>a book, a dog</td>
+                        </tr>
+                        <tr>
+                            <td>an</td>
+                            <td>Para sustantivos singulares que empiezan con vocal</td>
+                            <td>an apple, an elephant</td>
+                        </tr>
+                        <tr>
+                            <td>the</td>
+                            <td>Para sustantivos específicos</td>
+                            <td>the sun, the teacher</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="family-vocabulary">
+                    <h2>Vocabulario: La Familia</h2>
+                    <div class="family-tree">
+                        <div class="family-grid">
+                            <div class="family-card">
+                                <span class="family-member">Father</span>
+                                <span class="pronunciation">[ˈfɑːðər]</span>
+                                <span class="translation">Padre</span>
+                            </div>
+                            <div class="family-card">
+                                <span class="family-member">Mother</span>
+                                <span class="pronunciation">[ˈmʌðər]</span>
+                                <span class="translation">Madre</span>
+                            </div>
+                            <div class="family-card">
+                                <span class="family-member">Sister</span>
+                                <span class="pronunciation">[ˈsɪstər]</span>
+                                <span class="translation">Hermana</span>
+                            </div>
+                            <div class="family-card">
+                                <span class="family-member">Brother</span>
+                                <span class="pronunciation">[ˈbrʌðər]</span>
+                                <span class="translation">Hermano</span>
+                            </div>
+                            <div class="family-card">
+                                <span class="family-member">Grandfather</span>
+                                <span class="pronunciation">[ˈɡrændˌfɑːðər]</span>
+                                <span class="translation">Abuelo</span>
+                            </div>
+                            <div class="family-card">
+                                <span class="family-member">Grandmother</span>
+                                <span class="pronunciation">[ˈɡrænˌmʌðər]</span>
+                                <span class="translation">Abuela</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="quiz-container" id="quiz-articles">
+                <h2>Ejercicio 1: Artículos</h2>
+                <div class="progress-bar">
+                    <div class="progress"></div>
+                </div>
+                
+                <div class="question" id="question-1">
+                    <p class="question-text">Selecciona el artículo correcto: "I see _____ elephant."</p>
+                    <div class="options-grid">
+                        <button class="option-button" data-index="0">an</button>
+                        <button class="option-button" data-index="1">a</button>
+                        <button class="option-button" data-index="2">the</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="practice-section">
+                <h2>Diálogo: Mi Familia</h2>
+                <div class="dialogue-box">
+                    <div class="dialogue-pair">
+                        <p class="speaker-a">A: Tell me about your family.</p>
+                        <p class="speaker-b">B: I have a mother, a father, and two sisters.</p>
+                    </div>
+                    <div class="dialogue-pair">
+                        <p class="speaker-a">A: What does your father do?</p>
+                        <p class="speaker-b">B: He is a teacher at the university.</p>
+                    </div>
+                    <div class="dialogue-pair">
+                        <p class="speaker-a">A: And your mother?</p>
+                        <p class="speaker-b">B: She is an engineer.</p>
+                    </div>
+                </div>
+                <div class="practice-buttons">
+                    <button class="btn-primary" onclick="startDialoguePractice()">Practicar Diálogo</button>
+                    <button class="btn-secondary" onclick="showTranslation()">Ver Traducción</button>
+                </div>
+            </div>
+
+            <div class="writing-exercise">
+                <h2>Ejercicio de Escritura</h2>
+                <p>Describe a tu familia usando los artículos y el vocabulario aprendido:</p>
+                <textarea id="family-description" rows="6" placeholder="This is my family. I have a..."></textarea>
+                <button class="btn-primary" onclick="checkWriting()">Revisar</button>
+            </div>
+
+            <div class="navigation-buttons">
+                <a href="leccion4.html" class="btn-secondary">← Lección Anterior</a>
+                <a href="leccion6.html" class="btn-primary next-lesson-btn">Siguiente Lección →</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-copyright">
+                <p>&copy; 2025 Idina Idiomas Naturales. Todos los derechos reservados.</p>
+            </div>
+            <div class="creator-info">
+                <p>Creado con ❤️ por Juan Fernando Araujo Castellanos</p>
+                <div class="creator-bio">
+                    <p>Desarrollador Full Stack apasionado por la educación y el aprendizaje de idiomas</p>
+                    <div class="social-links">
+                        <a href="https://github.com/jfacdev1" target="_blank" rel="noopener" class="social-link">
+                            <span class="social-icon">👨‍💻</span>
+                            GitHub: @jfacdev1
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/lesson5.js"></script>
+</body>
+</html>

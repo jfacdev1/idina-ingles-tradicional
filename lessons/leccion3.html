@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lección 3: Preguntas con To Be y Colores - Idina Idiomas Naturales</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="main-nav">
+            <div class="logo">
+                <h1>Idina Idiomas Naturales</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="leccion2.html">Lección Anterior</a></li>
+                <li><a href="leccion4.html" class="next-lesson">Siguiente Lección →</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="lesson-content">
+            <h1>Lección 3: Preguntas con "to be" y Colores</h1>
+            
+            <div class="theory-section">
+                <h2>Formación de Preguntas con "to be"</h2>
+                <div class="grammar-box">
+                    <h3>Estructura de Preguntas</h3>
+                    <table>
+                        <tr>
+                            <th>Forma Afirmativa</th>
+                            <th>Forma Interrogativa</th>
+                        </tr>
+                        <tr>
+                            <td>I am a student</td>
+                            <td>Am I a student?</td>
+                        </tr>
+                        <tr>
+                            <td>You are happy</td>
+                            <td>Are you happy?</td>
+                        </tr>
+                        <tr>
+                            <td>He/She/It is here</td>
+                            <td>Is he/she/it here?</td>
+                        </tr>
+                        <tr>
+                            <td>We are friends</td>
+                            <td>Are we friends?</td>
+                        </tr>
+                        <tr>
+                            <td>They are teachers</td>
+                            <td>Are they teachers?</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="vocabulary-section">
+                    <h2>Colores en Inglés</h2>
+                    <div class="color-grid">
+                        <div class="color-card" style="background-color: red;">
+                            <span class="color-name">Red</span>
+                            <span class="color-pronunciation">[red]</span>
+                        </div>
+                        <div class="color-card" style="background-color: blue;">
+                            <span class="color-name">Blue</span>
+                            <span class="color-pronunciation">[bluː]</span>
+                        </div>
+                        <div class="color-card" style="background-color: yellow;">
+                            <span class="color-name">Yellow</span>
+                            <span class="color-pronunciation">[ˈjeloʊ]</span>
+                        </div>
+                        <div class="color-card" style="background-color: green;">
+                            <span class="color-name">Green</span>
+                            <span class="color-pronunciation">[ɡriːn]</span>
+                        </div>
+                        <div class="color-card" style="background-color: black; color: white;">
+                            <span class="color-name">Black</span>
+                            <span class="color-pronunciation">[blæk]</span>
+                        </div>
+                        <div class="color-card" style="background-color: white;">
+                            <span class="color-name">White</span>
+                            <span class="color-pronunciation">[waɪt]</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="quiz-container" id="quiz-questions">
+                <h2>Ejercicio 1: Formar Preguntas</h2>
+                <div class="progress-bar">
+                    <div class="progress"></div>
+                </div>
+                
+                <div class="question" id="question-1">
+                    <p class="question-text">Transforma en pregunta: "She is a teacher" →</p>
+                    <div class="options-grid">
+                        <button class="option-button" data-index="0">Is she a teacher?</button>
+                        <button class="option-button" data-index="1">Are she a teacher?</button>
+                        <button class="option-button" data-index="2">Does she a teacher?</button>
+                        <button class="option-button" data-index="3">She is a teacher?</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="quiz-container" id="quiz-colors">
+                <h2>Ejercicio 2: Colores y Preguntas</h2>
+                <div class="progress-bar">
+                    <div class="progress"></div>
+                </div>
+                
+                <div class="color-question" id="color-question-1">
+                    <div class="color-box"></div>
+                    <p class="question-text">¿De qué color es el cuadrado?</p>
+                    <div class="options-grid">
+                        <button class="option-button" data-index="0">Is it red?</button>
+                        <button class="option-button" data-index="1">Is it blue?</button>
+                        <button class="option-button" data-index="2">Is it green?</button>
+                        <button class="option-button" data-index="3">Is it yellow?</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="practice-section">
+                <h2>Práctica de Dictado</h2>
+                <div class="dictation-box">
+                    <p>Escucharás algunas preguntas sobre colores. Escribe lo que oigas.</p>
+                    <div class="dictation-input">
+                        <textarea id="dictation-text" rows="4" placeholder="Escribe aquí el dictado..."></textarea>
+                        <button class="btn-primary" onclick="checkDictation()">Comprobar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="navigation-buttons">
+                <a href="leccion2.html" class="btn-secondary">← Lección Anterior</a>
+                <a href="leccion4.html" class="btn-primary next-lesson-btn">Siguiente Lección →</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-copyright">
+                <p>&copy; 2025 Idina Idiomas Naturales. Todos los derechos reservados.</p>
+            </div>
+            <div class="creator-info">
+                <p>Creado con ❤️ por Juan Fernando Araujo Castellanos</p>
+                <div class="creator-bio">
+                    <p>Desarrollador Full Stack apasionado por la educación y el aprendizaje de idiomas</p>
+                    <div class="social-links">
+                        <a href="https://github.com/jfacdev1" target="_blank" rel="noopener" class="social-link">
+                            <span class="social-icon">👨‍💻</span>
+                            GitHub: @jfacdev1
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/lesson3.js"></script>
+</body>
+</html>
