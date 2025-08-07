@@ -31,6 +31,21 @@ Idina Idiomas Naturales es una plataforma educativa gratuita diseñada para apre
 - Días de la semana
 - Ejercicios de práctica
 
+### Lección 3: Preguntas y Colores
+- Formación de preguntas con "to be"
+- Vocabulario de colores
+- Ejercicios interactivos y dictado
+
+### Lección 4: Rutinas y Presente Simple
+- Uso del presente simple para rutinas
+- Verbos comunes de rutinas
+- Ejercicios de escritura
+
+### Lección 5: Artículos y Familia
+- Uso de los artículos (a, an, the)
+- Vocabulario sobre la familia
+- Práctica con diálogos y ejercicios de escritura
+
 ## 🛠️ Tecnologías Utilizadas
 
 - HTML5
